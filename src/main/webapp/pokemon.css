@@ -1,0 +1,97 @@
+/* 전체 페이지 스타일 */
+body {
+    background-color: #B3E5FC; /* 파스텔톤 하늘색 */
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+/* 제목 스타일 */
+h1 {
+    font-size: 28px;
+    color: #333;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+#basic-views {
+    background: white;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+
+/* 전체 컨테이너에 flexbox 적용 */
+#pokemon-container {
+    display: flex;
+    justify-content: center;  /* pokemon-info는 중앙에 위치 */
+    align-items: center;      /* 세로 방향 중앙 정렬 */
+    position: relative;       /* 자식 요소의 절대 위치를 설정할 수 있도록 */
+    margin: 20px;
+}
+
+/* 포켓몬 정보 카드 스타일 */
+#pokemon-info {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* 포켓몬 맛 설명 스타일 - 오른쪽 배치 */
+#pokemon-flavor {
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: absolute;
+    left: 320px; /* pokemon-info 오른쪽에 배치 (pokemon-info의 너비 + 마진) */
+    top: 50%; /* 세로 중앙에 맞추기 */
+    transform: translateY(-50%); /* 정확히 세로 중앙 맞추기 */
+}
+
+
+
+#basic-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffcc00;
+    background: white;
+}
+
+/* 포켓몬 이미지 스타일 */
+#pokemon-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffcc00;
+    background: white;
+}
+
+/* 버튼 스타일 */
+button {
+    background-color: #FF9800; /* 오렌지색 */
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* 버튼 호버 효과 */
+button:hover {
+    background-color: #F57C00; /* 더 진한 오렌지색 */
+    transform: scale(1.05);
+}
+
+.hidden { display: none; }

@@ -11,7 +11,11 @@ import java.util.Optional;
 import java.util.logging.Level;
 
 public class RandomPokeInfoServiceImpl extends ApiUtils implements PokeInfoService {
-
+    private RandomPokeInfoServiceImpl() {}
+    private static final RandomPokeInfoServiceImpl instance = new RandomPokeInfoServiceImpl();
+    public static RandomPokeInfoServiceImpl getInstance() {
+        return instance;
+    }
     public PokeRecordDTO getPokeInfo() {
         try {
             // 랜덤 포켓몬 이름 가져오기

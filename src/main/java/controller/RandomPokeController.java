@@ -14,7 +14,7 @@ import java.io.IOException;
 
 @WebServlet("/random")
 public class RandomPokeController extends HttpServlet {
-    private final RandomPokeInfoServiceImpl pokeInfoService = new RandomPokeInfoServiceImpl();
+    private static final RandomPokeInfoServiceImpl pokeInfoService = RandomPokeInfoServiceImpl.getInstance() ;
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

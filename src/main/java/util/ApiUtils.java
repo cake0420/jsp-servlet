@@ -15,19 +15,17 @@ public abstract class ApiUtils extends ApiUtilState implements ApiUtil{
                     .header("Accept", "application/json");
 
             switch (method.toUpperCase()) {
-                case "POST":
+                case "POST" ->
                     requestBuilder.POST(HttpRequest.BodyPublishers.ofString(body != null ? body : ""));
-                    break;
-                case "PUT":
+
+                case "PUT" ->
                     requestBuilder.PUT(HttpRequest.BodyPublishers.ofString(body != null ? body : ""));
-                    break;
-                case "DELETE":
+
+                case "DELETE" ->
                     requestBuilder.DELETE();
-                    break;
-                case "GET":
-                default:
+
+                case "GET" ->
                     requestBuilder.GET();
-                    break;
             }
 
             HttpRequest request = requestBuilder.build();

@@ -20,7 +20,7 @@ public class pokeController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/pokemon.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("pages/pokemon.jsp");
         dispatcher.forward(request, response);
     }
 }
